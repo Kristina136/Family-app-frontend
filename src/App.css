@@ -1,0 +1,160 @@
+/* MAIN SCREEN */
+body{
+  background-color: #f7dfd0;
+  font-family: 'Barlow', sans-serif;
+ color: #69696b;
+
+}
+.flex-column {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.flex-row{
+  display: flex;
+  align-items: center;
+  align-self: center;
+  
+}
+
+
+/* LIST OF RECIPES */
+.recipeContainer{
+  display: flex;
+  flex-wrap: wrap;
+justify-content: center;
+}
+.eachOfAllRecipes{
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  margin: 10px;
+  width: 350px;
+}
+.backBtn{
+  display: none;
+}
+
+.openRecipe{
+  text-decoration: none;
+  cursor: pointer;
+  color: #69696b;
+  
+}
+.link{
+  text-decoration: none;
+  cursor: default;
+  color: #69696b;
+}
+.delete{
+  background-color: #f1dcf5;
+  border: none;
+}
+.edit{
+  background-color: #d5e7a7;
+}
+.img{
+  border-radius: 150px;
+  margin-top: 15px;
+}
+
+/* SIDEBAR */
+.headerOfSiderBar{
+  font-weight: bold;
+  padding: 9px;
+  font-size: 17px;
+  text-align: center;
+}
+.marginLeft{
+  margin-left: 80px;
+  text-align: center;
+}
+.findInput{
+  width: 220px;
+  justify-content: space-around;
+}
+
+.open{
+  width: 50px !important;
+}
+
+
+
+
+/* FORM */
+.form{
+  text-align: center;
+  background-color: #fbf1ef;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+.openFormBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 3px 15px;
+  background-color: #fbf1ef;
+  width: 100%;
+  border: none;
+  color: #69696b;
+ 
+}
+.formImgInput{
+ margin: 5px;
+ 
+}
+input{
+  padding: 10px;
+  width: 300px;
+}
+input[type="file"]{
+  display: none;
+}
+.nameFile{
+  margin-left: 10px;
+}
+label{
+  cursor: pointer;
+}
+textarea{
+  height: 50px;
+  padding: 10px;
+  width: 300px;
+  font-family: 'Barlow', sans-serif;
+}
+.AddEditBtn{
+  padding: 7px;
+  font-size: 18px;
+  background-color: #69696b8b;
+  color: #f7dfd0;
+  width: 200px;
+  margin: auto;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.AddEditBtn:hover{
+  background-color: #d5e7a7c1;
+  color: #69696b8b;
+}
+
+/* FORM */
+
+
+@media all and (max-width:500px){
+  .close{
+    width: 80vw !important;
+  }
+  input{
+    width: 200px;
+    margin-top: 10px;
+  }
+  textarea{
+    width: 200px;
+  }
+}
+ 
