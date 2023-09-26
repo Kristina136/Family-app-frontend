@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { EachRecipe } from "./EachRecipe";
 import { RiFindReplaceFill } from "react-icons/ri/";
+//import uuid from 'react-uuid';
 
 export const RecipeApi = ({ setTitle, setDescription, setImage, setMyRecipe, collapsed}) => {
   const [input, setInput] = useState("");
-  const [word, setWord] = useState("");
+  const [word, setWord] = useState("salmon lemon");
   const [recArray, setRecArray] = useState([])
 
 
@@ -16,7 +17,7 @@ export const RecipeApi = ({ setTitle, setDescription, setImage, setMyRecipe, col
       );
       const result = await rec.json();
       setRecArray(result.hits)
-     // console.log(result.hits);
+    console.log(result.hits);
     };
     getRec();
   }, [word]);
@@ -26,9 +27,11 @@ export const RecipeApi = ({ setTitle, setDescription, setImage, setMyRecipe, col
   const searchRec = (e) => {
     e.preventDefault()
     setWord(input)
-
   };
 
+
+//recArray.map(each=>(each.recipe).id = uuid())
+//recArray.map(each=>console.log(each.recipe.id))
   return (
     <div>
       <div className={collapsed ? "marginLeft" : "flex-column each"} >
@@ -40,7 +43,7 @@ export const RecipeApi = ({ setTitle, setDescription, setImage, setMyRecipe, col
           />
           <RiFindReplaceFill onClick={searchRec}  size={45} color="#69696b"/> 
         </form>
-        {recArray.map((each, i) =><EachRecipe key={i} each={each}  setTitle={setTitle} setDescription={setDescription} setImage={setImage} setMyRecipe={setMyRecipe}/>)}
+        {recArray.map((each, i) =><EachRecipe key={each.recipe.image} each={each}  setTitle={setTitle} setDescription={setDescription} setImage={setImage} setMyRecipe={setMyRecipe}/>)}
       </div>
     </div>
   );
