@@ -6,7 +6,7 @@ import { SiReacthookform } from "react-icons/si/";
 import { Form } from "./Form";
 
 export const OwnRecipe = ({
-  setApi,
+  
   title,
   setTitle,
   description,
@@ -20,10 +20,10 @@ export const OwnRecipe = ({
   const [recipeID, setRecipeId] = useState("");
   const [openForm, setOpenForm] = useState(false);
 
-  setApi(true);
+
   useEffect(() => {
     getAllRecipes(setMyRecipe);
-  }, []);
+  }, [myRecipe]);
 
   const updatingInInput = (_id, title, setTitle, description, image) => {
     setOpenForm(!openForm);

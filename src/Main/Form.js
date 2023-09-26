@@ -2,7 +2,7 @@ import { GiMeal } from "react-icons/gi/";
 import { TbFileDescription } from "react-icons/tb/";
 import { BsCameraFill } from "react-icons/bs/";
 import { useState } from "react";
-import Swal from "sweetalert2";
+  const Swal = require("sweetalert2");
 
 export const Form = ({
   openForm,
@@ -20,7 +20,7 @@ export const Form = ({
   addRecipe,
   setOpenForm
 }) => {
-  const Swal = require("sweetalert2");
+
   const [nameFile, setNameFile] = useState("Keine ausgewält");
 
   const handleAdd = () => {
