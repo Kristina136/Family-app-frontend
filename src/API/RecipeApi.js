@@ -37,11 +37,12 @@ export const RecipeApi = ({ setTitle, setDescription, setImage, setMyRecipe, col
       <div className={collapsed ? "marginLeft" : "flex-column each"} >
         <form className="flex-row findInput" onSubmit={searchRec}>
            <input
+           className="inputApi"
             value={input}
             onChange={inputRec}
             placeholder="For example: avocado, salmon ..."
           />
-          <RiFindReplaceFill onClick={searchRec}  size={65} color="#69696b"/> 
+          <RiFindReplaceFill onClick={searchRec}  size={40} color="#69696b"/> 
         </form>
         {recArray.map((each, i) =><EachRecipe key={each.recipe.image} each={each}  setTitle={setTitle} setDescription={setDescription} setImage={setImage} setMyRecipe={setMyRecipe}/>)}
       </div>
