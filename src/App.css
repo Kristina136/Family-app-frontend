@@ -75,9 +75,23 @@ justify-content: center;
   width: 220px;
   justify-content: space-around;
 }
-
-.open{
-  width: 50px !important;
+.close{
+  min-width: 400px !important;
+}
+.eachRecipeApi{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px auto 20px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  width:250px;
+}
+.addedBtn{
+  margin-top: 8px;
+  border: none;
+  background-color: rgba(248, 248, 248, 0);
 }
 
 
@@ -102,7 +116,12 @@ justify-content: center;
   width: 100%;
   border: none;
   color: #69696b;
- 
+}
+.transformDown{
+  transform:rotate(270deg)
+}
+.transformUp{
+  transform:rotate(90deg)
 }
 .formImgInput{
  margin: 5px;
@@ -136,10 +155,15 @@ textarea{
   margin: auto;
   border-radius: 20px;
   margin-bottom: 10px;
+  margin-top: 10px;
+  border: none;
 }
 .AddEditBtn:hover{
   background-color: #d5e7a7c1;
   color: #69696b8b;
+}
+.imgApi{
+  margin: auto;
 }
 
 /* FORM */
