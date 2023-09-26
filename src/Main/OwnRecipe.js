@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { addRecipe, getAllRecipes, deleteRecipe, editRecipe } from "../FetchApp";
 import { MyRecipe } from "./MyRecipe";
-import { BsChevronDoubleDown } from "react-icons/bs/";
 import { SiReacthookform } from "react-icons/si/";
+import { FiChevronsLeft } from "react-icons/fi/";
 import { Form } from "./Form";
 
 export const OwnRecipe = ({
@@ -36,7 +36,7 @@ export const OwnRecipe = ({
   return (
     <div className="marginLeft">
         <button className="openFormBtn" onClick={() => setOpenForm(!openForm)}>
-         <SiReacthookform/> Open Form to create your recipe <BsChevronDoubleDown size={30} color="#69696b"/>
+         <SiReacthookform/> Open Form to create your recipe <FiChevronsLeft className={ openForm ? "transformUp" : "transformDown"}  size={30} color="#69696b"/>
         </button>
      
      <Form openForm={openForm}

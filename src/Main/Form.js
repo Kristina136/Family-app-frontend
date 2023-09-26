@@ -38,7 +38,7 @@ export const Form = ({
     Swal.fire({
       position: "center",
       icon: "success",
-      title: "Your recipe has been saved",
+      title: "Your recipe has been added",
       showConfirmButton: false,
       timer: 1500,
     });
