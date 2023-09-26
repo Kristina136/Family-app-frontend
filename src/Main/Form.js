@@ -2,6 +2,8 @@ import { GiMeal } from "react-icons/gi/";
 import { TbFileDescription } from "react-icons/tb/";
 import { BsCameraFill } from "react-icons/bs/";
 import { useState } from "react";
+import Swal from 'sweetalert2'
+
 
 
 export const Form = ({
@@ -34,7 +36,7 @@ export const Form = ({
       setMyRecipe
     );
     Swal.fire({
-      position: "top-end",
+      position: "center",
       icon: "success",
       title: "Your recipe has been saved",
       showConfirmButton: false,
@@ -56,7 +58,7 @@ export const Form = ({
       setEditing
     );
     Swal.fire({
-      position: "top-end",
+      position: "center",
       icon: "success",
       title: "Your recipe has been edited",
       showConfirmButton: false,
