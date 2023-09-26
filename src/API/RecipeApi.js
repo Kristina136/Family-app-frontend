@@ -41,7 +41,7 @@ export const RecipeApi = ({ setTitle, setDescription, setImage, setMyRecipe, col
             onChange={inputRec}
             placeholder="For example: avocado, salmon ..."
           />
-          <RiFindReplaceFill onClick={searchRec}  size={45} color="#69696b"/> 
+          <RiFindReplaceFill onClick={searchRec}  size={65} color="#69696b"/> 
         </form>
         {recArray.map((each, i) =><EachRecipe key={each.recipe.image} each={each}  setTitle={setTitle} setDescription={setDescription} setImage={setImage} setMyRecipe={setMyRecipe}/>)}
       </div>
