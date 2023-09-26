@@ -16,8 +16,7 @@ function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState(null);
-  const [main, setMain] = useState(false);
-  const [api, setApi] = useState(false);
+
 
 
   //SIDEBAR
@@ -60,7 +59,6 @@ transitionDuration={800}
            
             <RecipeApi 
                 collapsed={collapsed}
-                setMain={setMain}
                 setTitle={setTitle}
                 setDescription={setDescription}
                 setImage={setImage}
@@ -76,7 +74,6 @@ transitionDuration={800}
 
 
       <OwnRecipe
-                setApi={setApi}
                 title={title}
                 setTitle={setTitle}
                 description={description}
