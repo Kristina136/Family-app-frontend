@@ -73,7 +73,8 @@ export const Form = ({
         <div className="form">
           <div className="flex-row formImgInput">
             <GiMeal size={30} color="#69696b" />
-            <input
+            <input 
+              className="inputForm"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Name of recipe"
