@@ -2,7 +2,7 @@ import { GiMeal } from "react-icons/gi/";
 import { TbFileDescription } from "react-icons/tb/";
 import { BsCameraFill } from "react-icons/bs/";
 import { useState } from "react";
-  const Swal = require("sweetalert2");
+
 
 export const Form = ({
   openForm,
