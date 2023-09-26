@@ -1,14 +1,14 @@
 import axios from "axios";
 
 const getAllRecipes=(setMyRecipe)=>{
-    axios.get("https://family-app-8dmf.onrender.com/")
+    axios.get("https://family-app-igfj.onrender.com")
 .then(({data})=>{
     setMyRecipe(data)
 })
 }
 
 const addRecipe = (title, setTitle, description, setDescription, image, setImage, setMyRecipe)=>{
-    axios.post("https://family-app-8dmf.onrender.com/saveRecipe", {title,description, image})
+    axios.post("https://family-app-igfj.onrender.com/saveRecipe", {title,description, image})
     .then((data)=>{
         setTitle("");
         setDescription("");
@@ -18,14 +18,14 @@ const addRecipe = (title, setTitle, description, setDescription, image, setImage
 }
 
 const deleteRecipe = (_id, setMyRecipe)=>{
-    axios.post("https://family-app-8dmf.onrender.com/deleteRecipe", {_id})
+    axios.post("https://family-app-igfj.onrender.com/deleteRecipe", {_id})
     .then((data)=>{
         getAllRecipes(setMyRecipe)
     })
 }
 
 const editRecipe = (recipeID, title, setTitle, description, setDescription,  image, setImage, setMyRecipe, setEditing)=>{
-    axios.put("https://family-app-8dmf.onrender.com/editRecipe", {_id: recipeID, title,description, image})
+    axios.put("https://family-app-igfj.onrender.com/editRecipe", {_id: recipeID, title,description, image})
     .then((data)=>{
         setTitle("");
         setDescription("");
