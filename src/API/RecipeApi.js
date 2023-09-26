@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { EachRecipe } from "./EachRecipe";
 import { RiFindReplaceFill } from "react-icons/ri/";
 
-export const RecipeApi = ({ setTitle, setDescription, setImage, setMyRecipe,setMain, collapsed}) => {
+export const RecipeApi = ({ setTitle, setDescription, setImage, setMyRecipe, collapsed}) => {
   const [input, setInput] = useState("");
   const [word, setWord] = useState("");
   const [recArray, setRecArray] = useState([])
 
-  setMain(true)
+
 
   useEffect(() => {
     const getRec = async () => {
