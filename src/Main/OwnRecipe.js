@@ -39,6 +39,7 @@ export const OwnRecipe = ({
     setImage(image);
   };
 
+  if(loading) return <p>Loading...</p>
   return (
     <div className="marginLeft">
       {loading ? (
